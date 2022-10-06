@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Robot_URDF">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.042772617720555 -0.107304967317377 0.0764214720332112"
+        rpy="0 0 0" />
+      <mass
+        value="0.192303858587445" />
+      <inertia
+        ixx="0.00015889084245623"
+        ixy="-4.39439700418793E-22"
+        ixz="9.30578189122156E-21"
+        iyy="0.000426735035318632"
+        iyz="-9.48005166673887E-21"
+        izz="0.000275075178554265" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_URDF/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_URDF/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Front_Left">
+    <inertial>
+      <origin
+        xyz="1.3878E-17 -0.02279 -2.7756E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.011306" />
+      <inertia
+        ixx="1.5683E-06"
+        ixy="2.2021E-22"
+        ixz="-5.294E-22"
+        iyy="2.8156E-06"
+        iyz="6.6342E-23"
+        izz="1.5683E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_URDF/meshes/Front_Left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_URDF/meshes/Front_Left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Front_Left_joint"
+    type="continuous">
+    <origin
+      xyz="0.0968386837866211 -0.107304967317377 0.106421472033211"
+      rpy="-1.5707963267949 0 0.208922603667403" />
+    <parent
+      link="base_link" />
+    <child
+      link="Front_Left" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Front_Right">
+    <inertial>
+      <origin
+        xyz="0 0.00421 -2.7756E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.011306" />
+      <inertia
+        ixx="1.5683E-06"
+        ixy="-4.8879E-23"
+        ixz="5.294E-23"
+        iyy="2.8156E-06"
+        iyz="-9.4327E-23"
+        izz="1.5683E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_URDF/meshes/Front_Right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_URDF/meshes/Front_Right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Front_Right_Joint"
+    type="continuous">
+    <origin
+      xyz="0.0968386837866211 -0.107304967317377 0.0194214720332112"
+      rpy="1.5707963267949 0 -0.522852008779093" />
+    <parent
+      link="base_link" />
+    <child
+      link="Front_Right" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Back_Left">
+    <inertial>
+      <origin
+        xyz="-1.3878E-17 -0.02279 -6.9389E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.011306" />
+      <inertia
+        ixx="1.5683E-06"
+        ixy="-1.04E-23"
+        ixz="-3.9705E-22"
+        iyy="2.8156E-06"
+        iyz="3.4034E-22"
+        izz="1.5683E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_URDF/meshes/Back_Left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_URDF/meshes/Back_Left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Back_Left_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.011293448345511 -0.107304967317377 0.106421472033211"
+      rpy="-1.5707963267949 0 -1.30080624669728" />
+    <parent
+      link="base_link" />
+    <child
+      link="Back_Left" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Back_Right">
+    <inertial>
+      <origin
+        xyz="-1.3878E-17 0.00421 1.3878E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.011306" />
+      <inertia
+        ixx="1.5683E-06"
+        ixy="1.4259E-22"
+        ixz="4.2352E-22"
+        iyy="2.8156E-06"
+        iyz="-1.1094E-22"
+        izz="1.5683E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_URDF/meshes/Back_Right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_URDF/meshes/Back_Right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Back_Right_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.011293448345511 -0.107304967317377 0.0194214720332112"
+      rpy="1.5707963267949 0 0.402570519580544" />
+    <parent
+      link="base_link" />
+    <child
+      link="Back_Right" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+</robot>
