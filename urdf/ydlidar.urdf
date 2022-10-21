@@ -37,7 +37,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ydlidar_ros/meshes/ydlidar.dae" />
+          filename="package://robot_urdf/meshes/ydlidar.dae" />
       </geometry>
     </collision>
   </link>
