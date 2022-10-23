@@ -253,26 +253,22 @@
       </ray>
       <plugin filename="libgazebo_ros_laser.so" name="gazebo_ros_head_hokuyo_controller">
         <!-- Use topic name as /my_robot/scan -->
-        <topicName/>
+        <topicName>/robot_urdf/laser_scan</topicName>
         <frameName>laser_frame</frameName>
       </plugin>
     </sensor>
   </gazebo>
   <!--  Gazebo plugin for control here is already added for you -->
-
-  <!-- <gazebo>
-    <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
-      <robotNamespace>/robot_urdf</robotNamespace>
-      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
-      <legacyModeNS>true</legacyModeNS>
-    </plugin>
-  </gazebo> -->
-  
+  <gazebo>
+		<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+			<robotNamespace>/robot_urdf</robotNamespace>
+			<robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+			<legacyModeNS>true</legacyModeNS>
+		</plugin>
+	</gazebo>
   <!-- Create a joint between your robot and sensor -->
   <joint name="sensor_joint" type="fixed">
-   <origin
-      xyz="0.45 0 0.09"
-      rpy="3.14 0 3.14" />
+    <origin rpy="0 0 0" xyz="0.45 0 0.09"/>
     <parent link="dummy_link"/>
     <child link="base_laser"/>
   </joint>
