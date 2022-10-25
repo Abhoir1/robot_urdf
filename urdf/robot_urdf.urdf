@@ -387,4 +387,40 @@
       effort="0"
       velocity="0" />
   </joint>
+  <transmission name="rear_drive_left">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_rear_left_wheel">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rear_motor_left">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="rear_drive_right">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_rear_right_wheel">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rear_motor_right">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="front_steering_left">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_support_left">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="front_motor_left">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="front_steering_right">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_support_right">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="front_motor_right">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
 </robot>

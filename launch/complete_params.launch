@@ -18,7 +18,7 @@
         <!--  -->
 	<param name= "robot_description" command="$(find xacro)/xacro --inorder $(find robot_urdf)/xacro/robot.xacro " />
     <!-- Add in your robot name in the value tag -->
-    <param name = "my_robot" value="simple_car"/> 
+    <param name = "my_robot" value="robot_urdf"/> 
 	<arg name ="init_pose" value="-x 0 -y 0 -z 0 -R 0 -P 0 -Y 0"/>
     
 
@@ -28,7 +28,7 @@
 
 	<!-- Node for publishing base footprint -->
 	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
-        <param name="use_gui" value="True"/>
+        <param name="use_gui" value="false"/>
     </node>
 
 
