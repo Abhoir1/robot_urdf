@@ -28,7 +28,7 @@
 
 	<!-- Node for publishing base footprint -->
 	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
-        <param name="use_gui" value="False"/>
+        <param name="use_gui" value="True"/>
     </node>
 
 

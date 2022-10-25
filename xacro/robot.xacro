@@ -69,7 +69,7 @@
     <child
       link="base_laser" />
 	</joint>
-	<!-- <material name="red">
+	<material name="red">
 		<color rgba="0.8 0.0 0.0 1.0"/>
 	</material>
 	<material name="black">
@@ -81,7 +81,7 @@
 	<gazebo reference="base_link">
 		<material>Gazebo/Red</material>
 	</gazebo>
-	<gazebo reference="w_rear_right">
+	<!-- <gazebo reference="w_rear_right">
 		<material>Gazebo/FlatBlack</material>
 	</gazebo>
 	<gazebo reference="w_rear_left">
@@ -92,11 +92,11 @@
 	</gazebo>
 	<gazebo reference="w_front_left">
 		<material>Gazebo/FlatBlack</material>
-	</gazebo>
+	</gazebo> -->
 	<link name="dummy_link">
 	</link>
 	<joint name="dummy_joint" type="fixed">
 		<parent link="dummy_link"/>
 		<child link="base_link"/>
-	</joint> -->
+	</joint>
 </robot>
