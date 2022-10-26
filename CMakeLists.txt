@@ -12,6 +12,6 @@ install(DIRECTORY include/${PROJECT_NAME}/
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
 )
 
-install(DIRECTORY launch worlds rviz
+install(DIRECTORY launch worlds rviz config xacro urdf
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )

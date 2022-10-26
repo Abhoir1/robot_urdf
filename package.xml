@@ -17,6 +17,8 @@ for robot_urdf robot</p>
   <depend>joint_state_publisher_gui</depend>
   <depend>gazebo</depend>
   <depend>xacro</depend>
+  <depend>controller_manager</depend>
+  <depend>joint_state_controller</depend>
   <export>
     <architecture_independent />
   </export>

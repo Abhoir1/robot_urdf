@@ -49,12 +49,12 @@
       </geometry>
     </collision>
   </link>
-  <joint name="j_support_left" type="continuous">
+  <joint name="j_support_left" type="revolute">
     <origin rpy="0 0 0" xyz="0.368299999999998 0.152399999999998 0.26289"/>
     <parent link="base_link"/>
     <child link="support_left"/>
     <axis xyz="0 0 1"/>
-    <limit effort="0" lower="0" upper="0" velocity="0"/>
+    <limit effort="10" lower="-1.0472" upper="1.0472" velocity="100"/>
   </joint>
   <link name="front_left_wheel">
     <inertial>
@@ -83,7 +83,7 @@
     <parent link="support_left"/>
     <child link="front_left_wheel"/>
     <axis xyz="0 0 -1"/>
-    <limit effort="0" lower="0" upper="0" velocity="0"/>
+    <limit effort="30" velocity="100"/>
   </joint>
   <link name="support_right">
     <inertial>
@@ -107,12 +107,12 @@
       </geometry>
     </collision>
   </link>
-  <joint name="j_support_right" type="continuous">
+  <joint name="j_support_right" type="revolute">
     <origin rpy="0 0 0" xyz="0.3683 -0.1524 0.26289"/>
     <parent link="base_link"/>
     <child link="support_right"/>
     <axis xyz="0 0 1"/>
-    <limit effort="0" lower="0" upper="0" velocity="0"/>
+    <limit effort="30" lower="-1.0472" upper="1.0472" velocity="100"/>
   </joint>
   <link name="front_right_wheel">
     <inertial>
@@ -141,7 +141,7 @@
     <parent link="support_right"/>
     <child link="front_right_wheel"/>
     <axis xyz="0 0 -1"/>
-    <limit effort="0" lower="0" upper="0" velocity="0"/>
+    <limit effort="30" velocity="100"/>
   </joint>
   <link name="rear_left_wheel">
     <inertial>
@@ -198,12 +198,12 @@
     <parent link="base_link"/>
     <child link="rear_right_wheel"/>
     <axis xyz="0 0 1"/>
-    <limit effort="0" lower="0" upper="0" velocity="0"/>
+    <limit effort="30" velocity="100"/>
   </joint>
   <transmission name="rear_drive_left">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="j_rear_left_wheel">
-      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
     </joint>
     <actuator name="rear_motor_left">
       <mechanicalReduction>1</mechanicalReduction>
@@ -212,7 +212,7 @@
   <transmission name="rear_drive_right">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="j_rear_right_wheel">
-      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
     </joint>
     <actuator name="rear_motor_right">
       <mechanicalReduction>1</mechanicalReduction>
@@ -221,7 +221,7 @@
   <transmission name="front_steering_left">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="j_support_left">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="front_motor_left">
       <mechanicalReduction>1</mechanicalReduction>
@@ -230,7 +230,7 @@
   <transmission name="front_steering_right">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="j_support_right">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="front_motor_right">
       <mechanicalReduction>1</mechanicalReduction>
@@ -332,13 +332,13 @@
     </sensor>
   </gazebo>
   <!--  Gazebo plugin for control here is already added for you -->
-  <!-- <gazebo>
-		<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-			<robotNamespace>/robot_urdf</robotNamespace>
-			<robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
-			<legacyModeNS>true</legacyModeNS>
-		</plugin>
-	</gazebo> -->
+  <gazebo>
+    <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
+      <robotNamespace>/robot_urdf/</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+      <legacyModeNS>true</legacyModeNS>
+    </plugin>
+  </gazebo>
   <!-- Create a joint between your robot and sensor -->
   <joint name="sensor_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0.44 0 0.275"/>

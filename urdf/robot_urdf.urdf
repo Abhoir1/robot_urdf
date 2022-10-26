@@ -86,7 +86,7 @@
   </link>
   <joint
     name="j_support_left"
-    type="continuous">
+    type="revolute">
     <origin
       xyz="0.368299999999998 0.152399999999998 0.26289"
       rpy="0 0 0" />
@@ -97,10 +97,10 @@
     <axis
       xyz="0 0 1" />
     <limit
-      lower="0"
-      upper="0"
-      effort="0"
-      velocity="0" />
+      lower="-1.0472"
+      upper="1.0472"
+      effort="10"
+      velocity="100" />
   </joint>
   <link
     name="front_left_wheel">
@@ -155,10 +155,8 @@
     <axis
       xyz="0 0 -1" />
     <limit
-      lower="0"
-      upper="0"
-      effort="0"
-      velocity="0" />
+      effort="30"
+      velocity="100" />
   </joint>
   <link
     name="support_right">
@@ -202,7 +200,7 @@
   </link>
   <joint
     name="j_support_right"
-    type="continuous">
+    type="revolute">
     <origin
       xyz="0.3683 -0.1524 0.26289"
       rpy="0 0 0" />
@@ -213,10 +211,10 @@
     <axis
       xyz="0 0 1" />
     <limit
-      lower="0"
-      upper="0"
-      effort="0"
-      velocity="0" />
+      lower="-1.0472"
+      upper="1.0472"
+      effort="30"
+      velocity="100" />
   </joint>
   <link
     name="front_right_wheel">
@@ -271,10 +269,8 @@
     <axis
       xyz="0 0 -1" />
     <limit
-      lower="0"
-      upper="0"
-      effort="0"
-      velocity="0" />
+      effort="30"
+      velocity="100" />
   </joint>
   <link
     name="rear_left_wheel">
@@ -382,15 +378,13 @@
     <axis
       xyz="0 0 1" />
     <limit
-      lower="0"
-      upper="0"
-      effort="0"
-      velocity="0" />
+      effort="30"
+      velocity="100" />
   </joint>
   <transmission name="rear_drive_left">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="j_rear_left_wheel">
-      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
     </joint>
     <actuator name="rear_motor_left">
       <mechanicalReduction>1</mechanicalReduction>
@@ -399,7 +393,7 @@
   <transmission name="rear_drive_right">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="j_rear_right_wheel">
-      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
     </joint>
     <actuator name="rear_motor_right">
       <mechanicalReduction>1</mechanicalReduction>
@@ -408,7 +402,7 @@
   <transmission name="front_steering_left">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="j_support_left">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="front_motor_left">
       <mechanicalReduction>1</mechanicalReduction>
@@ -417,7 +411,7 @@
   <transmission name="front_steering_right">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="j_support_right">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="front_motor_right">
       <mechanicalReduction>1</mechanicalReduction>
