@@ -213,7 +213,7 @@
     <limit
       lower="-1.0472"
       upper="1.0472"
-      effort="30"
+      effort="10"
       velocity="100" />
   </joint>
   <link
@@ -324,6 +324,9 @@
       link="rear_left_wheel" />
     <axis
       xyz="0 0 1" />
+    <limit
+      effort="30"
+      velocity="100" />
   </joint>
   <link
     name="rear_right_wheel">

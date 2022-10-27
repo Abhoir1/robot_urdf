@@ -67,6 +67,11 @@
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1</real_time_factor>
       <real_time_update_rate>1000</real_time_update_rate>
+      <ode>                                                                                                    
+        <solver>                                                                                             
+          <iters>150</iters>                                                                               
+        </solver>                                                                                            
+      </ode>  
     </physics>
     <scene>
       <ambient>0.4 0.4 0.4 1</ambient>
@@ -82,9 +87,9 @@
     </spherical_coordinates>
     <state world_name='default'>
       <sim_time>0</sim_time>
-      <real_time>25 295731375</real_time>
-      <wall_time>1588130615 946635455</wall_time>
-      <iterations>25217</iterations>
+      <real_time>0</real_time>
+      <wall_time>0</wall_time>
+      <iterations>0</iterations>
       <model name='Construction Barrel'>
         <pose frame=''>-40.1479 -38.2428 0 0 -0 0</pose>
         <scale>1 1 1</scale>

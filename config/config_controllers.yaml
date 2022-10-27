@@ -6,12 +6,12 @@ robot_urdf:
   j_support_right_controller: # change the name
     type: effort_controllers/JointPositionController # Type of controller. 
     joint: j_support_right # Name of the joint.  
-    pid : {p: 70.0, i: 0.00, d: 0.0} # Enter your pid values eg. {p: 100.0 , i: 0.0 , d: 0.0} 
+    pid : {p: 180.0, i: 1.50, d: 3.0} # Enter your pid values eg. {p: 100.0 , i: 0.0 , d: 0.0} 
   # Controller 2
   j_support_left_controller: # change the name
     type: effort_controllers/JointPositionController # Type of controller. 
     joint: j_support_left # Name of the joint.  
-    pid : {p: 70.0, i: 0.00, d: 0.0} # Enter your pid values eg. {p: 100.0 , i: 0.0 , d: 0.0} 
+    pid : {p: 180.0, i: 1.50, d: 3.0} # Enter your pid values eg. {p: 100.0 , i: 0.0 , d: 0.0} 
   # Controller 3
   j_rear_left_wheel_controller: # change the name
     type: velocity_controllers/JointVelocityController # Type of controller. 
