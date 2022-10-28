@@ -7,9 +7,9 @@
 <robot name="robot_urdf">
   <link name="base_link">
     <inertial>
-      <origin rpy="0 0 0" xyz="-0.00698092133439408 -1.72591907613244E-06 0.254999556107946"/>
-      <mass value="51.1408666026729"/>
-      <inertia ixx="1.11587336793629" ixy="4.0970927744624E-05" ixz="-0.0288078810235416" iyy="4.02386606788245" iyz="2.38707294259556E-08" izz="5.10871768208811"/>
+      <origin rpy="0 0 0" xyz="-0.0077954581064524 -1.72316522734598E-06 0.241227552329224"/>
+      <mass value="51.2225965563684"/>
+      <inertia ixx="1.12008474839621" ixy="4.10428228302519E-05" ixz="-0.0357232741557662" iyy="4.04526054588228" iyz="5.12332120176019E-08" izz="5.1299324679939"/>
     </inertial>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -29,9 +29,9 @@
   </link>
   <link name="support_left">
     <inertial>
-      <origin rpy="0 0 0" xyz="2.27595720048157E-15 -0.000293612421093603 -0.0767006385266942"/>
-      <mass value="0.141762199312228"/>
-      <inertia ixx="0.000668283033387974" ixy="-4.83047329099128E-19" ixz="3.03478451631884E-19" iyy="0.000556501183749652" iyz="-4.22234085664355E-06" izz="0.000441916567523273"/>
+      <origin rpy="0 0 0" xyz="1.11022302462516E-16 -0.000175745860538146 -0.0988551027510241"/>
+      <mass value="0.511568168116717"/>
+      <inertia ixx="0.00233331327511673" ixy="7.80611924549488E-20" ixz="1.48302718659022E-18" iyy="0.00169516860077224" iyz="-7.37347093187782E-06" izz="0.00113414228037386"/>
     </inertial>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -39,7 +39,7 @@
         <mesh filename="package://robot_urdf/meshes/support_left.STL"/>
       </geometry>
       <material name="">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1"/>
       </material>
     </visual>
     <collision>
@@ -50,7 +50,7 @@
     </collision>
   </link>
   <joint name="j_support_left" type="revolute">
-    <origin rpy="0 0 0" xyz="0.368299999999998 0.152399999999998 0.26289"/>
+    <origin rpy="0 0 0" xyz="0.3683 0.15113 0.24943"/>
     <parent link="base_link"/>
     <child link="support_left"/>
     <axis xyz="0 0 1"/>
@@ -58,9 +58,9 @@
   </joint>
   <link name="front_left_wheel">
     <inertial>
-      <origin rpy="0 0 0" xyz="-8.93729534823251E-15 5.08204589522165E-14 -0.030000000001089"/>
-      <mass value="5.71507847538447"/>
-      <inertia ixx="0.0206714901181664" ixy="-3.07999650944405E-15" ixz="-1.52176080705458E-15" iyy="0.0206714901189933" iyz="-7.03694690751749E-15" izz="0.037921181347593"/>
+      <origin rpy="0 0 0" xyz="0 -0.0272681474371538 -6.93889390390723E-17"/>
+      <mass value="0.737916384214473"/>
+      <inertia ixx="0.00279813808464154" ixy="6.47020074202444E-20" ixz="-1.55146384000578E-18" iyy="0.00513458608151511" iyz="3.20353968483808E-19" izz="0.00279813808464155"/>
     </inertial>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -68,7 +68,7 @@
         <mesh filename="package://robot_urdf/meshes/front_left_wheel.STL"/>
       </geometry>
       <material name="">
-        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1"/>
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
       </material>
     </visual>
     <collision>
@@ -79,17 +79,17 @@
     </collision>
   </link>
   <joint name="j_front_left_wheel" type="continuous">
-    <origin rpy="1.5707963267949 0 0" xyz="0 -0.0299999999999973 -0.14732"/>
+    <origin rpy="0 0 0" xyz="0 0.03048 -0.14732"/>
     <parent link="support_left"/>
     <child link="front_left_wheel"/>
-    <axis xyz="0 0 -1"/>
+    <axis xyz="0 -1 0"/>
     <limit effort="30" velocity="100"/>
   </joint>
   <link name="support_right">
     <inertial>
-      <origin rpy="0 0 0" xyz="-2.22044604925031E-16 0.000293612421096434 -0.0767006385266943"/>
-      <mass value="0.141762199312228"/>
-      <inertia ixx="0.000668283033387972" ixy="-3.64993126381272E-19" ixz="1.32058390166985E-19" iyy="0.00055650118374965" iyz="4.22234085664436E-06" izz="0.000441916567523273"/>
+      <origin rpy="0 0 0" xyz="1.11022302462516E-16 -0.000175745860538229 -0.0988551027510242"/>
+      <mass value="0.511568168116718"/>
+      <inertia ixx="0.00233331327511673" ixy="4.81627040448131E-20" ixz="1.53131066763964E-18" iyy="0.00169516860077224" iyz="-7.37347093187839E-06" izz="0.00113414228037387"/>
     </inertial>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -97,7 +97,7 @@
         <mesh filename="package://robot_urdf/meshes/support_right.STL"/>
       </geometry>
       <material name="">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1"/>
       </material>
     </visual>
     <collision>
@@ -108,17 +108,17 @@
     </collision>
   </link>
   <joint name="j_support_right" type="revolute">
-    <origin rpy="0 0 0" xyz="0.3683 -0.1524 0.26289"/>
+    <origin rpy="0 0 0" xyz="0.3683 -0.15113 0.24943"/>
     <parent link="base_link"/>
     <child link="support_right"/>
     <axis xyz="0 0 1"/>
-    <limit effort="30" lower="-1.0472" upper="1.0472" velocity="100"/>
+    <limit effort="10" lower="-1.0472" upper="1.0472" velocity="100"/>
   </joint>
   <link name="front_right_wheel">
     <inertial>
-      <origin rpy="0 0 0" xyz="1.98729921407903E-14 -5.20278264914964E-14 -0.0299999999989118"/>
-      <mass value="5.71507847538445"/>
-      <inertia ixx="0.0206714901183594" ixy="-3.49911584476704E-13" ixz="4.05678793278916E-15" iyy="0.0206714901187996" iyz="-5.00102978907231E-15" izz="0.0379211813475925"/>
+      <origin rpy="0 0 0" xyz="-1.11022302462516E-16 0.0272681474371539 4.16333634234434E-17"/>
+      <mass value="0.737916384214473"/>
+      <inertia ixx="0.00279813808464155" ixy="6.71133983372056E-19" ixz="2.82564897248114E-18" iyy="0.00513458608151511" iyz="-1.02883637816587E-18" izz="0.00279813808464154"/>
     </inertial>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -126,7 +126,7 @@
         <mesh filename="package://robot_urdf/meshes/front_right_wheel.STL"/>
       </geometry>
       <material name="">
-        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1"/>
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
       </material>
     </visual>
     <collision>
@@ -137,17 +137,17 @@
     </collision>
   </link>
   <joint name="j_front_right_wheel" type="continuous">
-    <origin rpy="1.5707963267949 0 0" xyz="0 -0.0299999999999997 -0.14732"/>
+    <origin rpy="0 0 0" xyz="0 -0.03048 -0.14732"/>
     <parent link="support_right"/>
     <child link="front_right_wheel"/>
-    <axis xyz="0 0 -1"/>
+    <axis xyz="0 -1 0"/>
     <limit effort="30" velocity="100"/>
   </joint>
   <link name="rear_left_wheel">
     <inertial>
-      <origin rpy="0 0 0" xyz="3.51385587293862E-14 -4.57273108267486E-14 0.0300000000010904"/>
-      <mass value="5.71507847538444"/>
-      <inertia ixx="0.0206714901186204" ixy="-4.11316190814811E-13" ixz="6.3571271499716E-15" iyy="0.0206714901185395" iyz="-4.17569604207137E-15" izz="0.0379211813475923"/>
+      <origin rpy="0 0 0" xyz="-5.55111512312578E-17 -0.0272681474371538 2.77555756156289E-17"/>
+      <mass value="0.737916384214473"/>
+      <inertia ixx="0.00279813808464154" ixy="1.11590459934088E-19" ixz="-2.45201083392975E-18" iyy="0.0051345860815151" iyz="1.67351097464878E-19" izz="0.00279813808464155"/>
     </inertial>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -155,7 +155,7 @@
         <mesh filename="package://robot_urdf/meshes/rear_left_wheel.STL"/>
       </geometry>
       <material name="">
-        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1"/>
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
       </material>
     </visual>
     <collision>
@@ -166,16 +166,17 @@
     </collision>
   </link>
   <joint name="j_rear_left_wheel" type="continuous">
-    <origin rpy="1.5707963267949 0 0" xyz="-0.3683 0.18113 0.11557"/>
+    <origin rpy="0 0 0" xyz="-0.381 0.18161 0.10211"/>
     <parent link="base_link"/>
     <child link="rear_left_wheel"/>
-    <axis xyz="0 0 1"/>
+    <axis xyz="0 -1 0"/>
+    <limit effort="30" velocity="100"/>
   </joint>
   <link name="rear_right_wheel">
     <inertial>
-      <origin rpy="0 0 0" xyz="-5.60662627435704E-14 5.4678483962789E-15 -0.0300000000010884"/>
-      <mass value="5.71507847538442"/>
-      <inertia ixx="0.020671490118945" ixy="-1.92999249043331E-13" ixz="5.92317823464208E-15" iyy="0.0206714901182138" iyz="-2.67638866711897E-15" izz="0.0379211813475923"/>
+      <origin rpy="0 0 0" xyz="-1.11022302462516E-16 0.0336918525628461 -2.77555756156289E-17"/>
+      <mass value="0.737916384214473"/>
+      <inertia ixx="0.00279813808464154" ixy="-4.92403285766757E-19" ixz="-1.01956744195369E-18" iyy="0.0051345860815151" iyz="3.79673346254853E-20" izz="0.00279813808464154"/>
     </inertial>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -183,7 +184,7 @@
         <mesh filename="package://robot_urdf/meshes/rear_right_wheel.STL"/>
       </geometry>
       <material name="">
-        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1"/>
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
       </material>
     </visual>
     <collision>
@@ -194,48 +195,12 @@
     </collision>
   </link>
   <joint name="j_rear_right_wheel" type="continuous">
-    <origin rpy="1.5707963267949 0 0" xyz="-0.3683 -0.18113 0.11557"/>
+    <origin rpy="0 0 0" xyz="-0.381 -0.18161 0.10211"/>
     <parent link="base_link"/>
     <child link="rear_right_wheel"/>
-    <axis xyz="0 0 1"/>
+    <axis xyz="0 -1 0"/>
     <limit effort="30" velocity="100"/>
   </joint>
-  <transmission name="rear_drive_left">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="j_rear_left_wheel">
-      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="rear_motor_left">
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
-  <transmission name="rear_drive_right">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="j_rear_right_wheel">
-      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="rear_motor_right">
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
-  <transmission name="front_steering_left">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="j_support_left">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="front_motor_left">
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
-  <transmission name="front_steering_right">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="j_support_right">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="front_motor_right">
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
   <link name="base_laser">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.00029774 0.0066667 0.00013047"/>
@@ -341,7 +306,7 @@
   </gazebo>
   <!-- Create a joint between your robot and sensor -->
   <joint name="sensor_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0.44 0 0.275"/>
+    <origin rpy="0 0 0" xyz="0.45 0 0.265"/>
     <parent link="dummy_link"/>
     <child link="base_laser"/>
   </joint>
@@ -381,4 +346,40 @@
     <parent link="dummy_link"/>
     <child link="base_link"/>
   </joint>
+  <transmission name="rear_drive_left">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_rear_left_wheel">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rear_motor_left">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="rear_drive_right">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_rear_right_wheel">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rear_motor_right">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="front_steering_left">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_support_left">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="front_motor_left">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="front_steering_right">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_support_right">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="front_motor_right">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
 </robot>

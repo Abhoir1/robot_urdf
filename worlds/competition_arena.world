@@ -69,7 +69,7 @@
       <real_time_update_rate>1000</real_time_update_rate>
       <ode>                                                                                                    
         <solver>                                                                                             
-          <iters>150</iters>                                                                               
+          <iters>250</iters>                                                                               
         </solver>                                                                                            
       </ode>  
     </physics>
@@ -806,7 +806,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>36.1705 27.9822 13.173 0 0.79336 1.33551</pose>
+        <pose>-3.9606 -8.10158 4.02217 0 0.29736 0.972</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
