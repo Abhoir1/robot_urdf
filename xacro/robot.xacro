@@ -62,7 +62,7 @@
       name="sensor_joint"
       type="fixed">
 	  <origin
-		  xyz="0.45 0 0.265"
+		  xyz="0.525 0 0.2375"
 		  rpy="0 0 0" />
     <parent
       link="dummy_link" />
@@ -79,25 +79,25 @@
 		<color rgba="0.3 0.3 0.3 1.0"/>
 	</material>
 	<gazebo reference="base_link">
-		<material>Gazebo/Red</material>
+		<material>Gazebo/SkyBlue</material>
 	</gazebo>
 	<gazebo reference="support_left">
-		<material>Gazebo/Red</material>
+		<material>Gazebo/SkyBlue</material>
 	</gazebo>
 	<gazebo reference="support_right">
-		<material>Gazebo/Red</material>
+		<material>Gazebo/SkyBlue</material>
 	</gazebo>
 	<gazebo reference="front_left_wheel">
-		<material>Gazebo/FlatBlack</material>
+		<material>Gazebo/Grey</material>
 	</gazebo>
 	<gazebo reference="front_right_wheel">
-		<material>Gazebo/FlatBlack</material>
+		<material>Gazebo/Grey</material>
 	</gazebo>
 	<gazebo reference="rear_left_wheel">
-		<material>Gazebo/FlatBlack</material>
+		<material>Gazebo/Grey</material>
 	</gazebo>
 	<gazebo reference="rear_right_wheel">
-		<material>Gazebo/FlatBlack</material>
+		<material>Gazebo/Grey</material>
 	</gazebo>
 	<link name="dummy_link">
 	</link>
